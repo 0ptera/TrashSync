@@ -1,0 +1,27 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 2019-06-13
+  Bugfixes:
+    - ensure shortcut is toggled correctly on game start
+---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 2019-06-11
+  Bugfixes:
+    - removed debug code
+---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 2019-06-11
+  Features:
+    - added shortcut button
+    - added player setting Display toggle message
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2019-06-11
+  Changes:
+    - reflect player.player being renamed to player.character
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2019-05-26
+  Features:
+    - sync player trash count with requests
+    - hotkey toggling sync on and off, default ctrl-t

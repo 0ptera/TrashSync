@@ -1,0 +1,11 @@
+{
+  "name": "TrashSync",
+  "version": "0.2.2",
+  "title": "Trash Sync",
+  "author": "Optera",
+  "contact": "https://forums.factorio.com/memberlist.php?mode=viewprofile&u=21729",
+  "homepage": "",
+  "description": "Prevents requested items being instantly trashed or overflowing into new stacks by syncing auto trash to requests when players close their inventory.\nSync can be toggled by hotkey or shortcut.",
+  "factorio_version": "0.17",
+	"dependencies": ["base >= 0.17.47"]
+}
