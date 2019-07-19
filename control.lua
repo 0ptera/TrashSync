@@ -94,9 +94,21 @@ end)
 script.on_configuration_changed(function(event)
   global.trash_slots = global.trash_slots or {}
   -- ensure shortcut is toggled correctly
-  for _,player in pairs(game.players) do
+  for _, player in pairs(game.players) do
     if global.trash_slots[player.name] then
       player.set_shortcut_toggled("trash-sync-toggle-shortcut", true)
+
+      -- remove non existent items from stored slots
+      for name, count in pairs(global.trash_slots[player.name]) do
+        if not game.item_prototypes[name] then
+          global.trash_slots[player.name][name] = nil
+        end
+      end
+      if not next(global.trash_slots[player.name]) then
+        global.trash_slots[player.name] = nil
+        player.set_shortcut_toggled("trash-sync-toggle-shortcut", false)
+      end
+
     else
       player.set_shortcut_toggled("trash-sync-toggle-shortcut", false)
     end
